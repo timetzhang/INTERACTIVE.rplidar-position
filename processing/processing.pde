@@ -6,7 +6,7 @@ Serial myPort;
 int x, y;
 
 void setup() {
-  size(1024, 768, P3D);
+  fullScreen(P3D);
   background(20);
 
   //init serial port
@@ -27,6 +27,7 @@ void draw() {
       sy = s[1].trim();
       x = int(sx);
       y = int(sy);
+      
       println("code: " + x + "," + y);
     }
     catch(Exception e) {
